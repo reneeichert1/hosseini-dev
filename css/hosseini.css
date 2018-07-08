@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'frontier';
+    src: url('../webfonts/Last Frontier Personal Use.ttf')
+}
+
+@font-face
+{
+    font-family: 'shine';
+    src: url('../webfonts/Shine\ Personal\ Use.ttf')
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.slider-for {
+    margin: 30px 0;
+}
+
+.slider-preview {
+    margin: 0 15px;
+    width: auto;
+}
+
+.slider-container-div {
+    width: 100%;
+    background-color: bisque;
+}
+
+.slider-image-span {
+    float: right;
+}
+
+.navbar-brand, .slider-text-div, .caption-with-font, h1 {
+    font-family: frontier, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slider-text-div {
+    width: 50%;
+    float: left;
+    padding: 30px;
+    text-align: center;
+}
+
+.slider-caption, .heading {
+    font-size: 2em;
+    text-align: center;
+}
+
+.slider-image-description {
+    margin: 30px 0;
+}
+
+.slider-image-pricing {
+    text-align: center;
+    font-size: 2em;
+}
+
+/*Content*/
+
+.heading, .heading-margin, .description
+{
+    margin:30px 0;
+}
+.round-image img
+{   
+    transition: border-radius 0.2s;
+    -webkit-transition: border-radius 0.2s;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.outer-tile-container:hover > .round-image img
+{
+    border-radius: 0;
+}
+/*Content End*/
+
+
+.doctorListing
+{
+    margin:30px;
+    padding:15px;
+    background-color:#FAFAFA;
+}
+.ratings
+{color: #ffd633;
+}
+
+.mapMarker, .ratings, .contactInfo, .docDescription
+{margin-top: 15px;}
+.distanceFromYourLocation{
+    margin-left: 15px;
+}
+.docPortait
+{
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    float: left;
+    margin-right: 30px;
+}
+
+.contactInfo
+{
+    text-align: center;
+}
+
+.docMailAddress, .docPhone
+{
+    color: #000;
+}
+
+.docPhone
+{
+    float:left;
+}
+
+.docWhatsApp
+{
+    color: #25d366;
+    float: right;
+}
+
+.docMailAddress:hover, .docPhone:hover,.docWhatsApp:hover{
+    text-decoration: none;
+}
+
+.docWhatsApp:hover{
+    color:#075e54;
+}

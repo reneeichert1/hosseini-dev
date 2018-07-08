@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Hosseini-Dev
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/hosseini.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/hosseini.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" height="50px;">My-Face</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" id="slider">
+            <div class="col-sm">
+                <div class="slider-for">
+                    <div class="slider-container-div" v-for="image in images">
+                        <div class="slider-text-div">
+                            <div class="slider-caption">
+                                {{image.headline}}
+                            </div>
+                            <div class="slider-image-description">
+                                {{image.description}}
+                            </div>
+                            <div class="slider-image-pricing">
+                                ab
+                                <span style="font-family: sans-serif">{{image.pricing}} €</span>
+                            </div>
+                        </div>
+                        <a class="slider-image-span">
+                            <img class="slider-image" v-bind:src="image.imgSrc" alt="image">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <img class="slider-preview" v-for="image in images" v-bind:src="image.thumbSrc" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading-margin">
+                    Unser Angebot
+                </h1>
+            </div>
+        </div>
+        <div class="row" id="tiles">
+            <div class="col-12 col-lg-4" v-for="tile in tiles">
+                <div class="outer-tile-container">
+                    <div class="heading caption-with-font">{{tile.headline}}</div>
+                    <div class="round-image">
+                        <img v-bind:src="tile.imgSrc" v-bind:alt="tile.imgAlt">
+                    </div>
+                    <div class="description">
+                        {{tile.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="treatments">
+            <div class="col-12">
+                <h1 class="text-center heading-margin">
+                    Unsere Behandlungsmethoden
+                </h1>
+            </div>
+            <div class="col-lg-6 col-12" v-for="treatment in treatments">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="round-image">
+                            <img v-bind:src="treatment.imgSrc" v-bind:alt="treatment.imgAlt">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h1>{{treatment.headline}}</h1>
+                        <div class="description">
+                            {{treatment.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="ratings">
+            <h1>Hier werden die Bewertungen stehen, sollten welche kommen</h1>
+        </div>
+    </div>
+</body>
+
+</html>
